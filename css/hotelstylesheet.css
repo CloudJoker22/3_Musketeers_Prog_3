@@ -1,0 +1,537 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1b2e28;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;
+    background-image: url(../resources/pictures/Sample_Pictures/BGpage3.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat;
+}
+
+
+/* Estilo del contenedor del slider */
+.sliderpictures {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    background-color: #1b2e28;
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+.sliderpictures .carousel-inner .carousel-item img {
+    width: 550px; /* Ajusta el tamaño de las imágenes */
+    height: 600px; /* Ajusta la altura deseada */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que las imágenes sean elementos bloque */
+    margin: auto; /* Centra las imágenes dentro del contenedor */
+    border-radius: 10px 10px 10px 10px; /* Opcional: redondea los bordes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Opcional: añade sombra */
+}
+
+/* Estilo de los botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Posición de los botones */
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Transición suave al cambiar entre imágenes */
+.slide img {
+    transition: opacity 0.5s ease;
+}
+
+h1 {
+    color:  #1b2e28;
+    text-align: center;
+}
+
+#informacion-hotel, #mision_container, #login {
+    padding: 20px;
+}
+
+.container_hotel_info {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color:#e6dfc6;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color:  #1b2e28;
+    font-style: italic;
+}
+
+h3 {
+    color:  #1b2e28;
+    font-style: italic;
+}
+
+/* Testimonios */
+#servicios_info {
+    background-color: #5e968f;
+    padding: 20px;
+    /*text-align: center;*/
+}
+
+.container_servicios_info, .container_story{
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #5e968f;
+    padding: 20px;
+    text-align: center;
+}
+
+
+#habitaciones_info {
+    background-color: #e6dfc6;
+    padding: 20px;
+    /*text-align: center;*/
+    /*border: #1b2e28 dotted 3px;*/
+}
+
+/* Testimonios */
+#testimonios {
+    background-color: #5e968f;
+    padding: 20px;
+    /*text-align: center;*/
+    border: #1b2e28 dotted 3px;
+}
+
+#testimonios .testimonio {
+    margin: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.slider-testimonios {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cada testimonio */
+.slide-testimonio {
+    display: none; /* Ocultar por defecto */
+}
+
+/* Mostrar el primer testimonio por defecto */
+.slide-testimonio:first-child {
+    display: block;
+}
+
+/* Botones de navegación para testimonios */
+.prev-testimonio, .next-testimonio {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.prev-testimonio {
+    left: 10px;
+}
+
+.next-testimonio {
+    right: 10px;
+}
+
+/* Redes Sociales */
+#redes-sociales {
+    text-align: center;
+    padding: 10px;
+}
+
+#redes-sociales .redes a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3b5998;
+    font-weight: bold;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1b2e28;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;
+}
+
+/* Estilo del contenedor del slider */
+.sliderpictures {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    background-color: #1b2e28;
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+.sliderpictures .carousel-inner .carousel-item img {
+    width: 550px; /* Ajusta el tamaño de las imágenes */
+    height: 600px; /* Ajusta la altura deseada */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que las imágenes sean elementos bloque */
+    margin: auto; /* Centra las imágenes dentro del contenedor */
+    border-radius: 10px 10px 10px 10px; /* Opcional: redondea los bordes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Opcional: añade sombra */
+}
+
+/* Estilo de los botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Posición de los botones */
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Transición suave al cambiar entre imágenes */
+.slide img {
+    transition: opacity 0.5s ease;
+}
+
+h1 {
+    color:  #1b2e28;
+    text-align: center;
+}
+
+#informacion-hotel {
+    padding: 20px;
+}
+
+.container_hotel_info {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color:#e6dfc6;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color:  #1b2e28;
+    font-style: italic;
+}
+
+/* Testimonios */
+#servicios_info, #intro_container {
+    background-color: #5e968f;
+    padding: 20px;
+    /*text-align: center;*/
+}
+
+#habitaciones_info {
+    background-color: #e6dfc6;
+    padding: 20px;
+    /*text-align: center;*/
+}
+
+.habitaciones_info_container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+/* Testimonios */
+#testimonios {
+    background-color: #5e968f;
+    padding: 20px;
+    /*text-align: center;*/
+    border: #1b2e28 dotted 3px;
+}
+
+#testimonios .testimonio {
+    margin: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.slider-testimonios {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cada testimonio */
+.slide-testimonio {
+    display: none; /* Ocultar por defecto */
+}
+
+/* Mostrar el primer testimonio por defecto */
+.slide-testimonio:first-child {
+    display: block;
+}
+
+/* Botones de navegación para testimonios */
+.prev-testimonio, .next-testimonio {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.prev-testimonio {
+    left: 10px;
+}
+
+.next-testimonio {
+    right: 10px;
+}
+
+/* Redes Sociales */
+#redes-sociales {
+    text-align: center;
+    padding: 10px;
+}
+
+#redes-sociales .redes a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3b5998;
+    font-weight: bold;
+}
+
+/*Aqui inician los estilos de las tarjetas usadas*/
+
+/* Estilos para las tarjetas con efecto de flip */
+.card {
+    width: 100%;
+    height: 300px; /* Ajusta la altura de la tarjeta */
+    position: relative;
+    transform-style: preserve-3d; /* Necesario para el efecto 3D */
+    transition: transform 0.6s; /* Suaviza la rotación */
+    overflow: hidden; /* Evita que los contenidos sobresalgan */
+    background-color: transparent; /* Fondo transparente para evitar el color blanco */
+    box-shadow: none; /* Elimina el contorno durante la animación */
+}
+
+/* Aplica el efecto de giro al pasar el mouse sobre la tarjeta */
+.card:hover .flip-card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .flip-card-back {
+    transform: rotateY(0deg);
+}
+
+/* Parte delantera de la tarjeta (imagen) */
+.flip-card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden; /* Oculta la parte trasera cuando está rotada */
+    transition: transform 0.6s;
+    position: relative;
+}
+
+/* Título en la parte delantera */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+/* Subtítulo en la parte delantera */
+.card-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Parte trasera de la tarjeta (descripción) */
+.flip-card-back {
+    transform: rotateY(180deg); /* Inicialmente está rotada y oculta */
+    padding: 20px;
+    background-color: #1b2e28;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden; /* Asegura que la parte trasera no se vea cuando la tarjeta está rotada */
+    height: 100%;
+    width: 100%;
+    position: absolute; /* Asegura que se posicione correctamente sobre la tarjeta */
+    top: 0;
+    left: 0;
+    transition: transform 0.6s;
+}
+
+/*fin de estilos flip*/
+
+/* Estilo para las imágenes en las tarjetas */
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Asegura que el texto se ajuste correctamente */
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo para la imagen y descripción */
+.card-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden; /* Oculta la parte trasera cuando está rotada */
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.card-img-wrapper img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.card:hover .card-body {
+    opacity: 1; /* Muestra la descripción cuando el mouse está sobre la tarjeta */
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen */
+}
+
+.navbar {
+    background-color: #1b2e28 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #3b5998 !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-toggler-icon {
+    background-color: white !important; /* El icono será blanco */
+}
+
+ul.custom-bullets li {
+    list-style-type: none; /* Elimina los puntos por defecto */
+    position: relative;
+    padding-left: 25px; /* Añade espacio para el bullet */
+}
+
+ul.custom-bullets li::before {
+    content: '\2022'; /* Unicode para el bullet */
+    font-size: 24px; /* Tamaño del bullet */
+    color: #1b2e28; /* Color personalizado */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
