@@ -1,0 +1,42 @@
+USE hotel_bitsu;
+
+-- Tabla de usuarios
+CREATE TABLE usuarios (
+    id VARCHAR(15) PRIMARY KEY, 
+    usuario VARCHAR(50) UNIQUE NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    apellido1 VARCHAR(100) NOT NULL,
+    apellido2 VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) UNIQUE NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    tipo_usuario ENUM('normal', 'admin') DEFAULT 'normal',
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabla de servicios del hotel
+CREATE TABLE menu (
+    codigo VARCHAR(10) NOT NULL PRIMARY KEY, -- Código único de la habitación o servicio
+    nombre VARCHAR(100) NOT NULL,           -- Nombre de la habitación o servicio
+    tipo VARCHAR(50) NOT NULL,              -- Tipo de habitación (Ej: Simple, Doble, Suite)
+    mayordomo VARCHAR(100),                 -- Nombre del mayordomo a cargo (opcional)
+    costo DECIMAL(10, 2) NOT NULL           -- Costo del servicio o habitación
+);
+
+-- Tabla de reservaciones
+CREATE TABLE reservaciones (
+    id_reserva VARCHAR(10) PRIMARY KEY, -- ID en formato BKN-001
+    codigo_habitacion VARCHAR(10) NOT NULL, -- Código de la habitación reservada
+    fecha_inicio DATE NOT NULL, -- Fecha de inicio de la reservación
+    fecha_fin DATE NOT NULL, -- Fecha de fin de la reservación
+    usuario_id VARCHAR(15) NOT NULL, -- ID del usuario que hace la reservación
+    estado ENUM('pendiente', 'realizada', 'cancelada') DEFAULT 'pendiente', -- Estado de la reservación
+    FOREIGN KEY (codigo_habitacion) REFERENCES menu(codigo) ON DELETE CASCADE ON UPDATE CASCADE, -- Relación con el catálogo de habitaciones
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE ON UPDATE CASCADE -- Relación con la tabla de usuarios
+) ENGINE=InnoDB;
+
+Fix tabla de reservaciones sql
+ALTER TABLE reservaciones MODIFY COLUMN estado ENUM('pendiente', 'confirmada', 'cancelada') NOT NULL DEFAULT 'pendiente';
+
+API Key
+AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik
